@@ -22,14 +22,14 @@ Final Grade:
 
 <script>
 function calculateGWA() {
-    var prelim = document.getElementById("prelim").value;
-    var midterm = document.getElementById("midterm").value;
-    var finals = document.getElementById("finals").value;
+	var prelim, midterm, finals, gwa;
+    prelim = document.getElementById("prelim").value;
+    midterm = document.getElementById("midterm").value;
+    finals = document.getElementById("finals").value;
+	
+    gwa = (prelim * 1 + midterm * 1 + finals * 1) / 3;
 
-    var gwa = (prelim + midterm + finals)/3;
-
-    document.getElementById("result").innerHTML =
-        "Your GWA is: " + gwa.toFixed(2);
+    document.getElementById("result").innerHTML="Your GWA is: " + gwa;
 }
 </script>
 
