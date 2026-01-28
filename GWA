@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GWA Calculator</title>
+</head>
+<body>
+
+<h2>GWA Calculator</h2>
+
+Prelim Grade:
+<input type="number" id="prelim" placehodler="Enter Your Pre-lim"><br><br>
+
+Midterm Grade:
+<input type="number" id="midterm" placehodler="Enter Your Mid-term"><br><br>
+
+Final Grade:
+<input type="number" id="finals" placehodler="Enter Your Final"><br><br>
+
+<button onclick="calculateGWA()">Calculate GWA</button>
+
+<p id="result"></p>
+
+<script>
+function calculateGWA() {
+    var prelim = document.getElementById("prelim").value;
+    var midterm = document.getElementById("midterm").value;
+    var finals = document.getElementById("finals").value;
+
+    var gwa = (prelim + midterm + finals)/3;
+
+    document.getElementById("result").innerHTML =
+        "Your GWA is: " + gwa.toFixed(2);
+}
+</script>
+
+</body>
+</html>
